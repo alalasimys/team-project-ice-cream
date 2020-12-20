@@ -27,18 +27,72 @@
   transition-duration: 250ms;
   transition-timing-function: $bezier-page;
 
+  @include for-size(mobile) {
+    &:hover,
+    &:focus {
+      transform: scale(3);
+      box-shadow: 1px 2px 10px -1px $menu-color;
+    }
+  }
+
   @include for-size(tablet) {
     max-height: 85px;
+
+    &:hover,
+    &:focus {
+      transform: scale(2);
+      box-shadow: 1px 2px 10px -1px $menu-color;
+    }
   }
 
   @include for-size(desktop) {
     max-height: 138px;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.5);
+      box-shadow: 1px 2px 10px -1px $menu-color;
+    }
+  }
+}
+
+.img-right {
+  @include for-size(mobile) {
+    transition-duration: 250ms;
+
+    &:hover,
+    &:focus {
+      transform: translate(30px);
+    }
   }
 
-  &:hover,
-  &:focus {
-    transform: scale(1.5);
-    box-shadow: 1px 2px 10px -1px $menu-color;
+  @include for-size(tablet) {
+    transition: 0s;
+
+    &:hover,
+    &:focus {
+      transform: translate(0px);
+    }
+  }
+}
+
+.img-left {
+  @include for-size(mobile) {
+    transition-duration: 250ms;
+
+    &:hover,
+    &:focus {
+      transform: translate(-30px);
+    }
+  }
+
+  @include for-size(tablet) {
+    transition: 0s;
+
+    &:hover,
+    &:focus {
+      transform: translate(0px);
+    }
   }
 }
 
@@ -48,18 +102,25 @@
   transition-duration: 250ms;
   transition-timing-function: $bezier-page;
 
+  @include for-size(mobile) {
+    &:hover,
+    &:focus {
+      transform: scale(1.5);
+      box-shadow: 1px 2px 10px -1px $menu-color;
+    }
+  }
+
   @include for-size(tablet) {
     max-height: 175px;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.25);
+    }
   }
 
   @include for-size(desktop) {
     max-height: 285px;
-  }
-
-  &:hover,
-  &:focus {
-    transform: scale(1.25);
-    box-shadow: 1px 2px 10px -1px $menu-color;
   }
 }
 
