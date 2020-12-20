@@ -59,6 +59,8 @@
   background-color: $primary-white-color;
   box-shadow: 0 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+  transition-duration: 250ms;
+  transition-timing-function: $bezier-page;
   @include for-size(mobile-only) {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -73,6 +75,10 @@
     width: calc(100% / 3 - 30px);
     padding: 50px 44px 60px;
     margin-right: 30px;
+  }
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
   }
 }
 .location__type {
@@ -196,6 +202,10 @@
   }
   @include for-size(desktop) {
     @include fonts(16px, 500, 1.83, normal);
+  }
+  &:hover,
+  &:focus {
+    color: $primary-accent-color;
   }
 }
 
