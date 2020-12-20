@@ -15,6 +15,14 @@
   @media screen and (min-width: 1200px) {
     height: 585px;
   }
+
+  &__title {
+    font-family: $second-font;
+    text-transform: uppercase;
+    color: $accent-color;
+    text-align: center;
+    font-size: 18px;
+  }
 }
 
 .select-form {
@@ -293,8 +301,8 @@
     color: green;
   }
 }
-
-/* .checkbox-label {
+/*
+ .checkbox-label {
   display: inline-flex;
   align-items: center;
   font-size: 12px;
@@ -314,7 +322,7 @@
     color: $accent-color;
   }
 }
-
+*/
 .custom-checkbox {
   appearance: none;
   position: absolute;
@@ -329,13 +337,13 @@
   border: 1px solid $secondary-text-color;
   border-radius: 4px;
   background-color: transparent;
-  background-image: url('../../images/ice-cream.svg');
+  background-image: url('../images/ice-cream.svg');
 
   .custom-checkbox:checked + & {
     width: 25px;
     height: 25px;
     border: 1px solid $primary-text-color;
-    background-image: url('../../images/ice-cream-colored.svg');
+    background-image: url('../images/ice-cream-colored.svg');
     background-size: contain;
   }
-} */
+} 

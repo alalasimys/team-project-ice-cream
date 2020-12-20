@@ -10,8 +10,15 @@
     </button>
     <!-- <include src="./partials/order-form.html"></include> -->
         <form class="form-field">
+          <p class="form-field__title">Buy now!</p>
+          <input type="text" class="form-text" name="user-name" placeholder="Name*" autocomplete="off" pattern="^[a-zA-Z\s]+$"
+            required>
+          <input type="tel" class="form-text" name="user-tel" placeholder="Tel*" autocomplete="off" pattern="[0-9]{1,18}"
+            required>
+          <input type="mail" class="form-text" name="user-mail" placeholder="Mail*" autocomplete="off" required>
+          <input type="text" class="form-text" name="user-address" placeholder="Address Line*" autocomplete="off" required>
           <div class="select-form">
-            <label class="select-text" for="ice">Your favorite Ice-Cream</label>
+            <label class="select-text" for="ice">Choose Ice-Cream</label>
             <select class="select-ice" id="ice" name="ice">
               <option value=""></option>
               <option value="">Dark Chocolate</option>
@@ -54,23 +61,14 @@
               </svg>
             </div>
           </div>
-          <form action="">
-            <input type="text" class="form-text" name="user-name" placeholder="Name*" autocomplete="off" pattern="^[a-zA-Z\s]+$"
-              required>
-            <input type="tel" class="form-text" name="user-tel" placeholder="Tel*" autocomplete="off" pattern="[0-9]{1,18}"
-              required>
-            <input type="mail" class="form-text" name="user-tel" placeholder="Mail*" autocomplete="off" required>
+          <label class="checkbox-label">
+            <input class="custom-checkbox" type="checkbox" id="myCheck" />
+            <span class="checkbox-icon"></span>
+            I agree to become addicted to delicious ice cream
+            <a class="checkbox-link" href="">Agreement conditions</a>
+          </label>
         
-            <label class="checkbox-label">
-              <input class="custom-checkbox" type="checkbox" id="myCheck" />
-              <span class="checkbox-icon"></span>
-              I agree to become addicted to delicious ice cream
-              <a class="checkbox-link" href="">Agreement conditions</a>
-            </label>
-        
-            <button class="form-btn btn-buy" disabled>Order</button>
-          </form>
-        
+          <button class="form-btn btn-buy" disabled>Order</button>
         </form>
   </div>
 </div>
