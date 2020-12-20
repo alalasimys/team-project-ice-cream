@@ -111,6 +111,11 @@
 .card-svg {
   max-width: 70px;
   max-height: 35px;
+
+  @media screen and (min-width: 320px) {
+    max-width: 60px;
+    max-height: 30px;
+  }
 }
 
 .cards {
@@ -121,21 +126,32 @@
     display: flex;
     justify-content: center;
   }
-}
 
-@media screen and (min-width: 768px) {
-  .cards:not(:last-child) {
-    margin-right: 15px;
+  @media screen and (min-width: 320px) {
+    padding-left: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 30px;
   }
 }
 
 .select-box {
+  width: 15px;
+  height: 15px;
   position: absolute;
-  top: 7px;
+  top: 9px;
   left: 50px;
 
   @media screen and (min-width: 320px) {
     left: 0;
+    top: 6px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 4px;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -165,19 +181,13 @@
   }
 }
 
-// .form-btn:hover,
-// .form-btn:focus {
-//   color: $background-header-hero;
-//   background-color: $accent-color;
-// }
-
 .form-btn:disabled {
   color: grey;
   background-color: #fff;
 }
 
 .form-text {
-  height: 50px;
+  height: 40px;
   width: 100%;
   margin-top: 0px;
   display: block;
@@ -191,21 +201,17 @@
   line-height: 1.36;
   outline: none;
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
+    height: 50px;
     font-size: 16px;
-    margin-top: 40px;
-    width: 500px;
   }
 
   @media screen and (min-width: 1200px) {
     font-size: 18px;
     display: block;
-    width: 700px;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .form-text:not(:last-child) {
+  &:not(:last-child) {
     margin-bottom: 20px;
   }
 }
@@ -262,12 +268,14 @@
   @media screen and (min-width: 768px) {
     max-width: 100%;
   }
+
   @media screen and (min-width: 1200px) {
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 16px;
   }
+
   &:hover {
     cursor: pointer;
   }
@@ -277,18 +285,15 @@
     position: absolute;
 
     &:checked + .checkbox__icon {
-      width: 25px;
-      height: 25px;
       border: 1px solid $primary-text-color;
       background-image: url('../images/ice-cream-colored.svg');
-      background-size: contain;
     }
   }
 
   &__icon {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
     margin-right: 10px;
   
     border: 1px solid $secondary-text-color;
