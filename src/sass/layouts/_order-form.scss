@@ -57,6 +57,8 @@
 
 .select-ice {
   width: 100%;
+  font-family: $main-font;
+  font-size: 16px;
 
   @media screen and (min-width: 320px) {
     height: 30px;
@@ -66,21 +68,7 @@
     height: 40px;
   }
 }
-/*
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .select-ice {
-    width: 286px;
-    height: 30px;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .select-ice {
-    width: 350px;
-    height: 35px;
-  }
-}
-*/
 .pay-text {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -105,6 +93,10 @@
 
   @media screen and (max-width: 320px) {
     display: block;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
   }
 }
 
@@ -133,6 +125,12 @@
 
   @media screen and (min-width: 768px) {
     padding-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cards:not(:last-child) {
+    margin-right: 20px;
   }
 }
 
