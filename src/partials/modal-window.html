@@ -10,8 +10,17 @@
     </button>
     <!-- <include src="./partials/order-form.html"></include> -->
         <form class="form-field">
+          <p class="form-field__title">Buy now!</p>
+          <div class="contacts-container">
+            <input type="text" class="form-text" name="user-name" placeholder="Name*" autocomplete="off" pattern="^[a-zA-Z\s]+$"
+              required>
+            <input type="tel" class="form-text" name="user-tel" placeholder="Tel*" autocomplete="off" pattern="[0-9]{1,18}"
+              required>
+            <input type="mail" class="form-text" name="user-mail" placeholder="Mail*" autocomplete="off" required>
+            <input type="text" class="form-text" name="user-address" placeholder="Address Line*" autocomplete="off" required>
+          </div>
           <div class="select-form">
-            <label class="select-text" for="ice">Your favorite Ice-Cream</label>
+            <label class="select-text" for="ice">Choose Ice-Cream</label>
             <select class="select-ice" id="ice" name="ice">
               <option value=""></option>
               <option value="">Dark Chocolate</option>
@@ -31,46 +40,42 @@
         
           <div class="pay-card" role="group">
             <div class="cards">
-              <label for="pay-1"></label>
-              <input class="select-box" id="pay-1" name="pay" type="radio" value="mastercard" />
-              <svg class="card-svg">
-                <use href="./images/sprite-form.svg#visa"></use>
-              </svg>
+              <input class="select-box" id="visa" name="pay" type="radio" value="mastercard"/>
+              <label for="visa">
+                <svg class="card-svg">
+                  <use href="./images/sprite-form.svg#visa"></use>
+                </svg>
+              </label>
             </div>
         
             <div class="cards">
-              <label for="pay-2"></label>
-              <input class="select-box" id="pay-2" name="pay" type="radio" value="mastercard" />
-              <svg class="card-svg">
-                <use href="./images/sprite-form.svg#mastercard"></use>
-              </svg>
+              <input class="select-box" id="mastercard" name="pay" type="radio" value="mastercard" />
+              <label for="mastercard">
+                <svg class="card-svg">
+                  <use href="./images/sprite-form.svg#mastercard"></use>
+                </svg>
+              </label>
             </div>
         
             <div class="cards">
-              <label for="pay-3"></label>
-              <input class="select-box" id="pay-3" name="pay" type="radio" value="paypal" />
-              <svg class="card-svg">
-                <use href="./images/sprite-form.svg#paypal"></use>
-              </svg>
+              <input class="select-box" id="paypal" name="pay" type="radio" value="paypal" />
+              <label for="paypal">
+                <svg class="card-svg">
+                  <use href="./images/sprite-form.svg#paypal"></use>
+                </svg>
+              </label>
             </div>
           </div>
-          <form action="">
-            <input type="text" class="form-text" name="user-name" placeholder="Name*" autocomplete="off" pattern="^[a-zA-Z\s]+$"
-              required>
-            <input type="tel" class="form-text" name="user-tel" placeholder="Tel*" autocomplete="off" pattern="[0-9]{1,18}"
-              required>
-            <input type="mail" class="form-text" name="user-tel" placeholder="Mail*" autocomplete="off" required>
-        
-            <label class="checkbox-label">
-              <input class="custom-checkbox" type="checkbox" id="myCheck" />
-              <span class="checkbox-icon"></span>
-              I agree to become addicted to delicious ice cream
-              <a class="checkbox-link" href="">Agreement conditions</a>
-            </label>
-        
-            <button class="form-btn btn-buy" disabled>Order</button>
-          </form>
-        
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" name="message" />
+            <span class="checkbox__icon"></span>
+            <span class="checkbox__subscribe">I agree to become addicted to delicious ice cream
+              <a class="checkbox__link" href="">Agreement conditions</a>
+            </span>
+          </label>
+
+        <button class="form-btn btn-buy" disabled>Order</button>
         </form>
   </div>
 </div>

@@ -5,68 +5,67 @@
   margin-right: auto;
   background-position: center;
   max-width: 1600px;
-  height: 606px;
+  height: auto;
   padding: 23px;
   z-index: 10;
-  @media screen and (min-width: 768px) {
-    height: 500px;
-  }
 
-  @media screen and (min-width: 1200px) {
-    height: 585px;
+  &__title {
+    font-family: $second-font;
+    text-transform: uppercase;
+    color: $accent-color;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 32px;
+    }
   }
 }
 
+.contacts-container {
+  margin-bottom: 25px;
+}
+
 .select-form {
+
   text-align: center;
   align-items: center;
   justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
-  .select-form {
-    text-align: right;
-  }
-}
-
 .select-text {
   display: block;
-  color: $accent-color;
+  color: $primary-text-color;
+  font-family: $second-font;
+  font-weight: 400;
   font-size: 14px;
-  font-weight: 700;
   margin-bottom: 10px;
-}
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .select-text {
-    font-size: 24px;
-    margin-bottom: 12px;
+  @media screen and (min-width: 768px){
+    font-size: 18px;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .select-text {
-    display: inline-block;
-    font-size: 34px;
-    margin-right: 10px;
+  @media screen and (min-width: 1200px){
+    font-size: 20px;
   }
 }
 
 .select-ice {
-  width: 171px;
-}
+  width: 100%;
+  font-family: $main-font;
+  font-size: 16px;
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .select-ice {
-    width: 286px;
+  @media screen and (min-width: 320px) {
     height: 30px;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .select-ice {
-    width: 350px;
-    height: 35px;
+  @media screen and (min-width: 768px) {
+    height: 40px;
   }
 }
 
@@ -74,73 +73,84 @@
   margin-top: 10px;
   margin-bottom: 20px;
   color: $primary-text-color;
+  font-family: $second-font;
   font-size: 14px;
-  font-weight: 700;
-}
+  font-weight: 400;
+  text-align: center;
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .pay-text {
+  @media screen and (min-width: 768px) {
     font-size: 18px;
-    margin-top: -76px;
-    margin-bottom: 10px;
-    margin-left: 124px;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .pay-text {
-    font-size: 34px;
-    margin-top: -71px;
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
   }
 }
 
 .pay-card {
-  display: grid;
-}
+  display: flex;
+  justify-content: space-between;
 
-@media screen and (min-width: 768px) {
-  .pay-card {
-    display: flex;
+  @media screen and (max-width: 320px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
   }
 }
 
 .card-svg {
-  width: 70px;
-  height: 35px;
-}
+  max-width: 70px;
+  max-height: 35px;
 
-@media screen and (max-width: 767px) {
-  .card-svg {
-    width: 57px;
-    height: 30px;
+  @media screen and (min-width: 320px) {
+    max-width: 60px;
+    max-height: 30px;
   }
-}
-
-.cards {
-  display: inline-block;
 }
 
 .cards {
   padding-left: 30px;
   position: relative;
-}
 
-@media screen and (max-width: 767px) {
-  .cards:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 320px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 320px) {
+    padding-left: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 30px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .cards:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 20px;
   }
 }
 
 .select-box {
+  width: 15px;
+  height: 15px;
   position: absolute;
-  top: 7px;
-  left: 0;
+  top: 9px;
+  left: 50px;
+
+  @media screen and (min-width: 320px) {
+    left: 0;
+    top: 6px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 4px;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .form-btn {
@@ -155,9 +165,6 @@
   min-width: 209px;
 }
 
-@media screen and (max-width: 767px) {
-
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .form-btn {
     font-size: 22px;
@@ -172,64 +179,48 @@
   }
 }
 
-// .form-btn:hover,
-// .form-btn:focus {
-//   color: $background-header-hero;
-//   background-color: $accent-color;
-// }
-
 .form-btn:disabled {
   color: grey;
   background-color: #fff;
 }
 
 .form-text {
-  width: 200px;
-  max-width: 100%;
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  display: grid;
-  background-color: transparent;
-  border-top: 0;
-  border-left: 0;
-  border-bottom: 2px solid rgba(157, 164, 189, 0.4);
+  height: 40px;
+  width: 100%;
+  margin-top: 0px;
+  display: block;
+  background-color: $primary-white-color;
+  border: 2px solid $primary-accent-color;
+  border-radius: 4px;
   font-weight: 600;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin-bottom: 15px;
   font-size: 14px;
   letter-spacing: 0.1em;
   color: $primary-text-color;
   line-height: 1.36;
   outline: none;
 
-  &:nth-child(3n) {
-    margin-bottom: 0;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
+    height: 50px;
     font-size: 16px;
-    margin-top: 40px;
-    width: 500px;
   }
 
   @media screen and (min-width: 1200px) {
     font-size: 18px;
     display: block;
-    width: 700px;
-    margin-top: 50px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 
-.form-text:last-child {
-  margin-bottom: 0;
-}
-
 .form-text::placeholder {
+  font-family: $second-font;
+  font-weight: normal;
   font-size: 10px;
   text-transform: uppercase;
-  color: rgba(63, 90, 189, 0.815);
+  color: $secondary-text-color;
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     font-size: 12px;
   }
@@ -240,7 +231,7 @@
 }
 
 .form-text:focus {
-  border-bottom: 1px solid rgba(63, 90, 189, 0.815);
+  border: 2px solid $accent-color;
 }
 
 .form-text:not(:placeholder-shown):focus:valid {
@@ -253,18 +244,19 @@
   border-color: red;
 }
 
-.checkbox-label {
-  max-width: 300px;
-  display: block;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 10px;
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
   margin-bottom: 10px;
+  text-align: center;
   font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: $main-font;
+  text-align: center;
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-top: 30px;
     margin-bottom: 25px;
@@ -274,68 +266,48 @@
   @media screen and (min-width: 768px) {
     max-width: 100%;
   }
+
   @media screen and (min-width: 1200px) {
+    justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 16px;
   }
+
   &:hover {
     cursor: pointer;
   }
-}
 
-.checkbox-link {
-  color: $accent-color;
-  text-decoration: none;
+  &__input {
+    appearance: none;
+    position: absolute;
 
-  &:hover,
-  &:focus {
-    color: green;
+    &:checked + .checkbox__icon {
+      border: 1px solid $primary-text-color;
+      background-image: url('../images/ice-cream-colored.svg');
+    }
   }
-}
 
-/* .checkbox-label {
-  display: inline-flex;
-  align-items: center;
-  font-size: 12px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: $main-font;
-}
+  &__icon {
+    display: inline-block;
+    min-width: 25px;
+    min-height: 25px;
+    margin-right: 10px;
+  
+    border: 1px solid $secondary-text-color;
+    border-radius: 4px;
+    background-color: transparent;
+    background-image: url('../images/ice-cream.svg');
+  } 
 
-.checkbox-link {
-  display: inline-block;
-  margin-left: 5px;
-  color: $primary-white-color;
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
+  &__link {
     color: $accent-color;
+    text-decoration: none;
+  
+    &:hover,
+    &:focus {
+      color: green;
+    }
   }
 }
 
-.custom-checkbox {
-  appearance: none;
-  position: absolute;
-}
-
-.checkbox-icon {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  margin-right: 5px;
-
-  border: 1px solid $secondary-text-color;
-  border-radius: 4px;
-  background-color: transparent;
-  background-image: url('../../images/ice-cream.svg');
-
-  .custom-checkbox:checked + & {
-    width: 25px;
-    height: 25px;
-    border: 1px solid $primary-text-color;
-    background-image: url('../../images/ice-cream-colored.svg');
-    background-size: contain;
-  }
-} */
