@@ -259,12 +259,11 @@
   fill: $primary-white-color;
   background-color: $accent-color;
   border: 0;
-
+  transition: all 0.2s ease-in-out;
   &:hover,
   &:focus {
-    color: $accent-color;
-    fill: $accent-color;
-    background-color: $primary-white-color;
+    transform: scale(1.1);
+    box-shadow: 10px 10px 99px 6px rgb(248, 31, 31);
   }
 }
 
@@ -276,12 +275,12 @@
   fill: $accent-color;
   background-color: $primary-white-color;
   border: 0;
-
+  transition: all 0.2s ease-in-out;
   &:hover,
   &:focus {
-    color: $primary-white-color;
-    fill: $primary-white-color;
-    background-color: $accent-color;
+    color: $accent-color;
+    transform: scale(1.1);
+    box-shadow: 10px 10px 99px 6px rgb(248, 31, 31);
   }
 }
 .location__button-title {
