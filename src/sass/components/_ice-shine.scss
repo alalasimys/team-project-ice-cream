@@ -1,60 +1,147 @@
 #onewhite {
   position: absolute;
-  transform: translate(20%, -886%);
+  transform: translate(20%, -606%);
+
+  @include for-size(tablet) {
+    transform: translate(20%, -400%);
+  }
+  @include for-size(desktop) {
+    transform: translate(20%, -886%);
+  }
 }
 
 #twowhite {
   position: absolute;
-  transform: translate(150%, -840%);
+  transform: translate(100%, -330%);
+
+  @include for-size(tablet) {
+    transform: translate(100%, -330%);
+  }
+  @include for-size(desktop) {
+    transform: translate(150%, -840%);
+  }
 }
+
 #threewhite {
-  position: absolute;
-  transform: translate(220%, -790%);
+  @include for-size(mobile) {
+    position: absolute;
+    transform: translate(155%, -421%);
+  }
+
+  @include for-size(tablet) {
+    transform: translate(70%, -522%);
+  }
+  @include for-size(desktop) {
+    transform: translate(220%, -790%);
+  }
 }
 
 #oneph {
   position: absolute;
-  transform: translate(240%, -667%);
+  transform: translate(110%, -570%);
+
+  @include for-size(tablet) {
+    transform: translate(100%, -510%);
+  }
+  @include for-size(desktop) {
+    transform: translate(240%, -667%);
+  }
 }
 
 #twoph {
   position: absolute;
-  transform: translate(140%, -640%);
+  transform: translate(110%, -570%);
+
+  @include for-size(tablet) {
+    transform: translate(53%, -342%);
+  }
+  @include for-size(desktop) {
+    transform: translate(140%, -640%);
+  }
 }
 
 #threeph {
   position: absolute;
-  transform: translate(40%, -630%);
+  transform: translate(10%, -370%);
+
+  @include for-size(tablet) {
+    transform: translate(110%, -670%);
+  }
+  @include for-size(desktop) {
+    transform: translate(40%, -630%);
+  }
 }
 
 #oneorange {
   position: absolute;
-  transform: translate(15%, -510%);
+  transform: translate(60%, -410%);
+
+  @include for-size(tablet) {
+    transform: translate(15%, -510%);
+  }
+  @include for-size(desktop) {
+    transform: translate(15%, -510%);
+  }
 }
 
 #twoorange {
   position: absolute;
   transform: translate(115%, -490%);
+
+  @include for-size(tablet) {
+    transform: translate(115%, -490%);
+  }
+  @include for-size(desktop) {
+    transform: translate(115%, -490%);
+  }
 }
 
 #threeorange {
   position: absolute;
-  transform: translate(215%, -472%);
+  transform: translate(115%, -240%);
+
+  @include for-size(tablet) {
+    transform: translate(115%, -240%);
+  }
+  @include for-size(desktop) {
+    transform: translate(215%, -472%);
+  }
 }
 
 #onegreen {
   position: absolute;
-  transform: translate(-6%, -418%);
+  transform: translate(5%, -290%);
+
+  @include for-size(tablet) {
+    transform: translate(5%, -290%);
+  }
+  @include for-size(desktop) {
+    transform: translate(-6%, -418%);
+  }
 }
 
 #twogreen {
   position: absolute;
-  transform: translate(200%, -389%);
+  transform: translate(115%, -290%);
+
+  @include for-size(tablet) {
+    transform: translate(115%, -290%);
+  }
+  @include for-size(desktop) {
+    transform: translate(200%, -389%);
+  }
 }
 
 #oneyellow {
   position: absolute;
-  transform: translate(100%, -351%);
+  transform: translate(60%, -220%);
+
+  @include for-size(tablet) {
+    transform: translate(60%, -220%);
+  }
+  @include for-size(desktop) {
+    transform: translate(100%, -351%);
+  }
 }
 
 #twoyellow {
@@ -64,17 +151,38 @@
 
 #onered {
   position: absolute;
-  transform: translate(25%, -230%);
+  transform: translate(30%, -530%);
+
+  @include for-size(tablet) {
+    transform: translate(30%, -190%);
+  }
+  @include for-size(desktop) {
+    transform: translate(25%, -230%);
+  }
 }
 
 #twored {
   position: absolute;
-  transform: translate(120%, -250%);
+  transform: translate(60%, -547%);
+
+  @include for-size(tablet) {
+    transform: translate(60%, -180%);
+  }
+  @include for-size(desktop) {
+    transform: translate(120%, -250%);
+  }
 }
 
 #threered {
   position: absolute;
-  transform: translate(220%, -300%);
+  transform: translate(120%, -520%);
+
+  @include for-size(tablet) {
+    transform: translate(10%, -170%);
+  }
+  @include for-size(desktop) {
+    transform: translate(220%, -300%);
+  }
 }
 
 .group {
