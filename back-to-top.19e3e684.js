@@ -117,19 +117,33 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/slider-script.js":[function(require,module,exports) {
-$(document).ready(function () {
-  $('.slider').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear',
-    dotsClass: 'dots-slik' //   nextArrow: '<button type="button" class="arrow arrow-next"><svg class="arrow-icon"><use href="/images/sprite.svg#facebook"></use></svg></button>',
-    // prevArrow: '<button type="button" class="arrow arrow-back"><svg  class="arrow-icon"><use href="./images/slider/arrow-back.svg"></use></svg></button>'
+})({"js/back-to-top.js":[function(require,module,exports) {
+var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+var rootElement = document.documentElement;
 
+function handleScroll() {
+  // Do something on scroll
+  var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+
+  if (rootElement.scrollTop / scrollTotal > 0.10) {
+    // Show button
+    scrollToTopBtn.classList.add("showBtn");
+  } else {
+    // Hide button
+    scrollToTopBtn.classList.remove("showBtn");
+  }
+}
+
+function scrollToTop() {
+  // Scroll to top logic
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
   });
-});
+}
+
+scrollToTopBtn.addEventListener("click", scrollToTop);
+document.addEventListener("scroll", handleScroll);
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -334,5 +348,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slider-script.js"], null)
-//# sourceMappingURL=/slider-script.1237f05d.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/back-to-top.js"], null)
+//# sourceMappingURL=/back-to-top.19e3e684.js.map

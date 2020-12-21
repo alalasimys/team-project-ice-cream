@@ -117,18 +117,20 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/slider-script.js":[function(require,module,exports) {
-$(document).ready(function () {
-  $('.slider').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear',
-    dotsClass: 'dots-slik' //   nextArrow: '<button type="button" class="arrow arrow-next"><svg class="arrow-icon"><use href="/images/sprite.svg#facebook"></use></svg></button>',
-    // prevArrow: '<button type="button" class="arrow arrow-back"><svg  class="arrow-icon"><use href="./images/slider/arrow-back.svg"></use></svg></button>'
+})({"js/btn-disable.js":[function(require,module,exports) {
+// < !--Кнопка должна быть выключенной, пока не отмечен чекбокс-- >
+var inputs = document.querySelectorAll("input[type=checkbox]");
+var button = document.querySelector(".form-btn");
 
+function check() {
+  button.disabled = true;
+  inputs.forEach(function (input) {
+    if (input.checked) button.disabled = false;
   });
+}
+
+inputs.forEach(function (input) {
+  return input.addEventListener("change", check);
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -334,5 +336,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slider-script.js"], null)
-//# sourceMappingURL=/slider-script.1237f05d.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/btn-disable.js"], null)
+//# sourceMappingURL=/btn-disable.b5a78342.js.map

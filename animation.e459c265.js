@@ -117,19 +117,29 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/slider-script.js":[function(require,module,exports) {
-$(document).ready(function () {
-  $('.slider').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear',
-    dotsClass: 'dots-slik' //   nextArrow: '<button type="button" class="arrow arrow-next"><svg class="arrow-icon"><use href="/images/sprite.svg#facebook"></use></svg></button>',
-    // prevArrow: '<button type="button" class="arrow arrow-back"><svg  class="arrow-icon"><use href="./images/slider/arrow-back.svg"></use></svg></button>'
+})({"js/animation.js":[function(require,module,exports) {
+(function () {
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return rect.top <= 0 && rect.bottom >= 0 || rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) && rect.top <= (window.innerHeight || document.documentElement.clientHeight) || rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+  }
 
-  });
-});
+  var elements = document.querySelectorAll('.anim-show');
+  var elem = document.querySelectorAll('.animate__animated');
+
+  window.onscroll = function () {
+    elements.forEach(function (item) {
+      if (isElementInViewport(item)) {
+        item.classList.add('active');
+      }
+    });
+    elem.forEach(function (item) {
+      if (isElementInViewport(item)) {
+        item.classList.add('animate__heartBeat');
+      }
+    });
+  };
+})();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -334,5 +344,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slider-script.js"], null)
-//# sourceMappingURL=/slider-script.1237f05d.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/animation.js"], null)
+//# sourceMappingURL=/animation.e459c265.js.map
