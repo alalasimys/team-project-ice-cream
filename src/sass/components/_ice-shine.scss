@@ -313,22 +313,21 @@
 
 #starshine {
   position: absolute;
-  top: 18%;
-  left: 36%;
-  width: 40%;
-  height: 62%;
+  top: 13%;
+  left: 40%;
+  width: 48%;
+  height: 52%;
   z-index: 1;
   overflow: hidden;
+  pointer-events: none;
 
   @include for-size(tablet) {
-    position: absolute;
-    top: 20%;
-    left: 41%;
-    width: 44%;
-    height: 62%;
-    z-index: 1;
-    overflow: hidden;
+    top: 13%;
+    left: 49%;
+    width: 15%;
+    height: 50%;
   }
+
   @include for-size(desktop) {
     top: 17%;
     height: 67%;
