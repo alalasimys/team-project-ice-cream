@@ -50,10 +50,20 @@
 
     &--menu {
       fill: #d41443;
+      &:hover,
+      &:focus {
+        fill:white;
+      }
+
     }
     &--cross {
       fill: white;
+      &:hover,
+      &:focus {
+        fill: #d41443;
+      }
     }
+
   }
 }
 
