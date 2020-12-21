@@ -334,6 +334,10 @@
     left: 47%;
     width: 18%;
   }
+
+  @media (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .shine.first {
