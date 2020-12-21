@@ -217,6 +217,7 @@
     padding-right: 17px;
     width: 162px;
     display: block;
+    transition: all 250ms $bezier-page;
     @include fonts(16px, 700, 1.31, normal);
     @include for-size(tablet) {
       width: 192px;
