@@ -147,7 +147,6 @@
       width: 335px;
       transform: translate(0%, -60%);
       left: 3.7%;
-
     }
   }
 
@@ -212,6 +211,7 @@
   height: 40px;
   background-color: $primary-white-color;
   border-radius: 25px;
+  transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: linear;
 
